@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import Login from './components/Login'
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <h2>Foodie Hubble App</h2>
-      <img src={logo} className="App-logo" alt="logo" />
       <Login />
     </div>
   );
