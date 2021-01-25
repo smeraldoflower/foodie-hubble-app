@@ -7,7 +7,7 @@ function Login() {
     axios.post(api.login,
         {
             "username": "Ahmed Sadman",
-            "password": "123456"
+            "password": "1234567"
         }
     )
         .then(function (response) {
