@@ -13,5 +13,5 @@ export const api = {
 	updateRestaurant: (id) => `${baseURL}/admin/restaurants/update/${id}`,
 	restaurantDetails: `${baseURL}/restaurant/details`,
 	login: `${baseURL}/auth/login`,
-	register: `${baseURL}/auth/register`,
+	signup: `${baseURL}/auth/register`,
 };

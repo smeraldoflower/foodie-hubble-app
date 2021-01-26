@@ -9,6 +9,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+
         <h2>Foodie Hubble App</h2>
 
         <nav>
@@ -17,11 +18,12 @@ function App() {
             <li><Link to="/About">About</Link></li>
           </ul>
         </nav>
-        
+
         <Switch>
           <Route path="/About" component={About} />
           <Route path="/" component={Home} />
         </Switch>
+
       </div>
     </Router>
 
