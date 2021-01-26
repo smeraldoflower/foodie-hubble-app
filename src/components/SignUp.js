@@ -1,26 +1,29 @@
-// import './Login.css';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
 
-function Login() {
+function SignUp() {
 
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [usernameOnLogin, setUsernameOnLogin] = useState('');
-    const [passwordOnLogin, setPasswordOnLogin] = useState('');
+    const [usernameOnSignUp, setUsernameOnSignUp] = useState('');
+    const [passwordOnSignUp, setPasswordOnSignUp] = useState('');
+    const [emailOnSignUp, setEmailOnSignUp] = useState('');
 
-    const handleLogin = (event) => {
+    const handleSignUp = (event) => {
         event.preventDefault();
-        setUsernameOnLogin(username);
-        setPasswordOnLogin(password);
+        setUsernameOnSignUp(username);
+        setEmailOnSignUp(email);
+        setPasswordOnSignUp(password);
     }
 
     useEffect(() => {
-        axios.post(api.login,
+        axios.post(api.signup,
             {
-                "username": `${usernameOnLogin}`,
-                "password": `${passwordOnLogin}`
+                "username": `${usernameOnSignUp}`,
+                "email": `${emailOnSignUp}`,
+                "password": `${passwordOnSignUp}`
             }
         )
             .then(function (response) {
@@ -32,18 +35,21 @@ function Login() {
                 console.log(error);
             });
 
-    }, [usernameOnLogin, passwordOnLogin])
+    }, [usernameOnSignUp, emailOnSignUp, passwordOnSignUp])
 
     return (
-        <div className="Login">
-            <form onSubmit={handleLogin}>
+        <div className="SignUp">
+            <form onSubmit={handleSignUp}>
                 <label>Username: 
                     <input type='text' value={username} onChange={e => setUsername(e.target.value)} />
+                </label><br />
+                <label>Email: 
+                    <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
                 </label><br />
                 <label>Password: 
                     <input type='text' value={password} onChange={e => setPassword(e.target.value)} />
                 </label><br />
-                    <input type='submit' value='LOGIN'/>
+                    <input type='submit' value='SIGNUP'/>
             </form>
             <p>{}</p>
         </div >
@@ -51,4 +57,4 @@ function Login() {
 
 }
 
-export default Login;
+export default SignUp;
