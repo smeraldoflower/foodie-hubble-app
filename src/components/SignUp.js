@@ -2,40 +2,35 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
 
+// Not working, returning HTTP/1.1 400 BAD REQUEST
+
 function SignUp() {
 
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [usernameOnSignUp, setUsernameOnSignUp] = useState('');
-    const [passwordOnSignUp, setPasswordOnSignUp] = useState('');
-    const [emailOnSignUp, setEmailOnSignUp] = useState('');
+    const [isSignedUp, setSignUpStatus] = useState(false);
+
 
     const handleSignUp = (event) => {
         event.preventDefault();
-        setUsernameOnSignUp(username);
-        setEmailOnSignUp(email);
-        setPasswordOnSignUp(password);
-    }
-
-    useEffect(() => {
         axios.post(api.signup,
             {
-                "username": `${usernameOnSignUp}`,
-                "email": `${emailOnSignUp}`,
-                "password": `${passwordOnSignUp}`
+                "username": `${username}`,
+                "email": `${email}`,
+                "password": `${password}`
             }
         )
             .then(function (response) {
-                console.log(response.data.found);
-                console.log(response.data.message);
-                console.log(response.data);
+                // setSignUpStatus(response.data.found);
+                // console.log(response.data.found);
+                // console.log(response.data.message);
+                console.log(response);
             })
             .catch(function (error) {
                 console.log(error);
             });
-
-    }, [usernameOnSignUp, emailOnSignUp, passwordOnSignUp])
+    }
 
     return (
         <div className="SignUp">

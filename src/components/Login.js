@@ -1,5 +1,5 @@
 // import './Login.css';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
 
@@ -7,23 +7,18 @@ function Login() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [usernameOnLogin, setUsernameOnLogin] = useState('');
-    const [passwordOnLogin, setPasswordOnLogin] = useState('');
+    const [isloggedOn, setLoginStatus] = useState(false);
 
     const handleLogin = (event) => {
         event.preventDefault();
-        setUsernameOnLogin(username);
-        setPasswordOnLogin(password);
-    }
-
-    useEffect(() => {
         axios.post(api.login,
             {
-                "username": `${usernameOnLogin}`,
-                "password": `${passwordOnLogin}`
+                "username": `${username}`,
+                "password": `${password}`
             }
         )
             .then(function (response) {
+                setLoginStatus(response.data.found);
                 console.log(response.data.found);
                 console.log(response.data.message);
                 console.log(response.data);
@@ -31,21 +26,20 @@ function Login() {
             .catch(function (error) {
                 console.log(error);
             });
-
-    }, [usernameOnLogin, passwordOnLogin])
+    }
 
     return (
         <div className="Login">
             <form onSubmit={handleLogin}>
-                <label>Username: 
+                <label>Username:
                     <input type='text' value={username} onChange={e => setUsername(e.target.value)} />
                 </label><br />
-                <label>Password: 
+                <label>Password:
                     <input type='text' value={password} onChange={e => setPassword(e.target.value)} />
                 </label><br />
-                    <input type='submit' value='LOGIN'/>
+                <input type='submit' value='LOGIN' />
             </form>
-            <p>{}</p>
+            {isloggedOn ? <p>Login Successful</p> : null}
         </div >
     );
 
