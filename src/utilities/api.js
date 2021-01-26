@@ -3,7 +3,7 @@ const baseURL = 'https://foodhub-api.herokuapp.com';
 export const api = {
 	createBlogPost: `${baseURL}/blog/create`,
 	getBlogList: `${baseURL}/blog`,
-	searchRestaurant: `${baseURL}/restaurant/search`,
+	searchRestaurant: (foodtype) => `${baseURL}/restaurant/search?food=${foodtype}&sort=popularity`,
 	createRestaurant: `${baseURL}/admin/restaurants/create`,
 	deleteRestaurant: `${baseURL}/admin/restaurants/delete`,
 	reviewRestaurant: (id) => `${baseURL}/restaurant/review/${id}`,
