@@ -11,7 +11,7 @@ export const api = {
 	orderHistory: `${baseURL}/restaurant/order`,
 	userRestaurant: `${baseURL}/restaurant/user`,
 	updateRestaurant: (id) => `${baseURL}/admin/restaurants/update/${id}`,
-	restaurantDetails: `${baseURL}/restaurant/details`,
+	restaurantDetails: (id) => `${baseURL}/restaurant/details/${id}`,
 	login: `${baseURL}/auth/login`,
 	signup: `${baseURL}/auth/register`,
 };

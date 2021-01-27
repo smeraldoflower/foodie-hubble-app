@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from '../components/Login'
 import SearchBar from '../components/SearchBar'
+import RestaurantDetails from '../components/RestaurantDetails'
 
 function Home() {
 
@@ -9,6 +10,8 @@ function Home() {
             <Login />
             <br />
             <SearchBar />
+            <br/>
+            <RestaurantDetails/>
         </div>
     )
 }
