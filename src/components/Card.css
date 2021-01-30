@@ -1,0 +1,10 @@
+.Card {
+    margin: 5;
+    border-style: solid;
+    border-color: brown;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+  }
+
+h3{  text-align: left;  }

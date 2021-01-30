@@ -7,7 +7,7 @@ function RestaurantDetails() {
     const[restaurantName, setRestaurantName] = useState('');
     const[hours, setHours] = useState({});
     const[foodtypes, setFoodTypes] = useState([]);
-    const[bannerImg, setBannerImg] = useState(``)
+    const[bannerImg, setBannerImg] = useState(``);
 
 
     const getRestaurantDetail = () => {
