@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch, Link, Redirect } from "react-router-dom";
 import axios from 'axios'
 import { api } from '../utilities/api'
 import SearchResults from '../pages/SearchResults';
@@ -34,19 +34,22 @@ function SearchBar() {
                     <input type='submit' value='🔍' />
                 </form>
                 <br />
+
+                {/* <Redirect to = {`/SearchResults/${foodtype}`}/> */}
+
                 {
-                    searchResults.length !== 0 ? searchResults.map(
-                        (result) =>
-                            <Card
-                                id={result._id}
-                                name={result.name}
-                                banner_image={result.banner_image}
-                            />
-                    ) : null
+                    searchResults.length !== 0 ?             
+                        searchResults.map(
+                            (result) =>
+                                <Card
+                                    key = {`${result._id}`}
+                                    id={result._id}
+                                    name={result.name}
+                                    banner_image={result.banner_image}
+                                />
+                        ) : null
                 }
             </div >
-            <Route path={`/SearchResults/${foodtype}`} component={SearchResults} />
-
         </Router>
     );
 
