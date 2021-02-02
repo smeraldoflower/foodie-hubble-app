@@ -11,7 +11,7 @@ function Home() {
             <br />
             <SearchBar />
             <br/>
-            <RestaurantDetails/>
+            <RestaurantDetails />
         </div>
     )
 }

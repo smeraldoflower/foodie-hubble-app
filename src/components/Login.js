@@ -31,10 +31,10 @@ function Login() {
     return (
         <div className="Login">
             <form onSubmit={handleLogin}>
-                <label>Username:
-                    <input type='text' value={username} onChange={e => setUsername(e.target.value)} />
-                </label><br />
-                <label>Password:
+                <label>Username:&nbsp;
+                    <input type='text' value={username} onChange={e => setUsername(e.target.value)} /><br />
+                </label>
+                <label>Password:&nbsp;
                     <input type='text' value={password} onChange={e => setPassword(e.target.value)} />
                 </label><br />
                 <input type='submit' value='LOGIN' />

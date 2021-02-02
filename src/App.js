@@ -3,6 +3,8 @@ import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import './css/App.css';
 import Home from './pages/Home'
 import About from './pages/About'
+import SignUpPg from './pages/SignUpPg'
+
 
 function App() {
 
@@ -14,12 +16,14 @@ function App() {
 
         <nav>
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/About">About</Link></li>
+            <li><Link to="/" style={{textDecoration: 'none'}}>Home</Link></li>
+            <li><Link to="/About" style={{textDecoration: 'none'}}>About</Link></li>
+            <li><Link to="/SignUpPg" style={{textDecoration: 'none'}}>SignUp</Link></li><br/>
           </ul>
         </nav>
 
         <Switch>
+          <Route path="/SignUpPg" component={SignUpPg} />
           <Route path="/About" component={About} />
           <Route path="/" component={Home} />
         </Switch>
