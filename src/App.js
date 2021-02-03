@@ -17,13 +17,12 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/About">About</Link></li>
-            <li><Link to="/SR">SR</Link></li>
           </ul>
         </nav>
 
         <Switch>
           <Route path="/About" component={About} />
-          <Route path="/SR" component={SearchResults} />
+          <Route path="/SearchResults" component={SearchResults} />
           <Route path="/" component={Home} />
         </Switch>
 
