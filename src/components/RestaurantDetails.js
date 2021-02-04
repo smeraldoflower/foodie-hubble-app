@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
 
-function RestaurantDetails() {
+function RestaurantDetails(props) {
 
     const[restaurantName, setRestaurantName] = useState('');
     const[hours, setHours] = useState({});
@@ -11,7 +11,7 @@ function RestaurantDetails() {
 
 
     const getRestaurantDetail = () => {
-        axios.get(api.restaurantDetails(`5cc1fd33df245c427cc26655`))
+        axios.get(api.restaurantDetails(`5cc1f333df245c427cc2664b`))
             .then(function (response) {
                 setRestaurantName(response.data.data.name);
                 setHours(response.data.data.hour);
@@ -31,6 +31,7 @@ function RestaurantDetails() {
 
     return (
         <div className="Login">
+            <h2 onClick = {getRestaurantDetail}> I am a restaurant </h2>
             <input type="submit" value = "RestDet" onClick = {getRestaurantDetail}/>
             <br/>
             <h2>{restaurantName}</h2>

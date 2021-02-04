@@ -11,7 +11,7 @@ function SearchBar(props) {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         props.history.push({
-            pathname: '/SearchResults',
+            pathname: `/SearchResults/${foodtype}`,
             state: {
                 foodType: foodtype
             }

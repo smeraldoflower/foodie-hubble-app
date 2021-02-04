@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch, Link, Redirect } from "react-router-dom";
-import axios from 'axios'
-import { api } from '../utilities/api'
-import SearchBar from '../components/SearchBar'
+import axios from 'axios';
+import { api } from '../utilities/api';
+import SearchBar from '../components/SearchBar';
 import Card from '../components/Card';
 
 function SearchResults(props) {
@@ -31,7 +31,8 @@ function SearchResults(props) {
 
     return (
         <div className="SearchResults">
-            <h2>SEARCH RESULTS : {foodType} </h2>
+            <h2>SEARCH RESULTS : {foodType} </h2> 
+            <p>{foodType === '' ? 'There were no results for your search. Here is a list of all available restaurants.' : ''}</p>
             {
                 searchResults.length !== 0 ?
                     searchResults.map(

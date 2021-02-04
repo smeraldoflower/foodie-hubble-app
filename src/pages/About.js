@@ -5,8 +5,8 @@ function About() {
 
     return (
         <div className="About">
-            <h2>About Us</h2>            
-            <RestaurantDetails/>
+            <h2>About Us</h2>
+            <RestaurantDetails/>            
         </div>
     )
 }

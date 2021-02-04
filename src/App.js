@@ -4,6 +4,7 @@ import './css/App.css';
 import Home from './pages/Home'
 import About from './pages/About'
 import SearchResults from './pages/SearchResults'
+import RestaurantDetails from './components/RestaurantDetails';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Switch>
           <Route path="/About" component={About} />
           <Route path="/SearchResults" component={SearchResults} />
+          {/* <Route path="/restaurant/details/" component={RestaurantDetails}/> */}
           <Route path="/" component={Home} />
         </Switch>
 
