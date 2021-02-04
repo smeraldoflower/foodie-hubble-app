@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import '../css/Review.css';
 
-function Review() {
+function Review(props) {
     return (
-        <div>
+        <div className="Review">
+            <h4 className="Review_Username">Username</h4>
+            <p>
+                This is my written review. This is my written review. This is my written review.
+                This is my written review. This is my written review. This is my written review.
+                This is my written review. This is my written review. This is my written review.
+                This is my written review. This is my written review. This is my written review.                This is my written review. This is my written review. This is my written review.
+                This is my written review. This is my written review. This is my written review.
+            </p>
             
         </div>
     )
