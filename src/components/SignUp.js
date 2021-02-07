@@ -34,6 +34,7 @@ function SignUp() {
 
     return (
         <div className="SignUp">
+            <h2>NEW MEMBER? SIGN UP HERE</h2>
             <form onSubmit={handleSignUp}>
                 <label>Username: 
                     <input type='text' value={username} onChange={e => setUsername(e.target.value)} />

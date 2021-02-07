@@ -4,6 +4,7 @@ import './css/App.css';
 import NavBar from './components/NavBar/NavBar'
 import Home from './pages/Home'
 import About from './pages/About'
+import LoginPage from './pages/LoginPage'
 import SearchResults from './pages/SearchResults'
 import RestaurantDetails from './components/RestaurantDetails';
 
@@ -13,15 +14,9 @@ function App() {
     <Router>
       <div className="App">
         <NavBar/>
-        <nav>
-          <Link to="/">Home </Link><br/>
-          <Link to="/About">About </Link>
-        </nav>
-
-
-
         <Switch>
           <Route path="/About" component={About} />
+          <Route path="/Login" component={LoginPage} />
           <Route path="/SearchResults" component={SearchResults} />
           {/* <Route path="/restaurant/details/" component={RestaurantDetails}/> */}
           <Route path="/" component={Home} />

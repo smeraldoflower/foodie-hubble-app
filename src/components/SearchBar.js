@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { FaBorderStyle } from 'react-icons/fa';
 import { Route, BrowserRouter as Router, Switch, Link, Redirect } from "react-router-dom";
 import { api } from '../utilities/api'
 
@@ -19,9 +20,20 @@ function SearchBar(props) {
     }
 
     return (
-        <div className="Login">
+        <div className="Login"
+            style={
+                {
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: '5%',
+                    margin: '10px',
+                    borderStyle: 'groove'
+                }
+            }
+        >
             <form onSubmit={handleFormSubmit}>
-                <input type='text' placeholder='Search restaurants...' size='65'
+                <input type='text' placeholder='Search restaurants...' size='100'
                     value={foodtype} onChange={e => setFoodType(e.target.value)} />
                 <input type='submit' value='🔍' />
             </form>
