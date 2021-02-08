@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch, Link, Redirect } from "react-router-dom";
 import axios from 'axios';
 import { api } from '../utilities/api';
-import SearchBar from '../components/SearchBar';
-import Card from '../components/Card';
+import SearchBar from '../components/SearchBar/SearchBar';
+import Card from '../components/Card/Card';
 
 function SearchResults(props) {
     const foodType =

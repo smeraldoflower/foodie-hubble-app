@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../css/SearchBar.css';
+import './SearchBar.css';
 
 function SearchBar(props) {
 

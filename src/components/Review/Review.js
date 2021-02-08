@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Review.css';
+import './Review.css';
 
 function Review(props) {
     return (
