@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
+import { useParams } from "react-router-dom";
+
 
 function RestaurantDetails(props) {
 
+    const {id} = useParams();
+    
     const[restaurantName, setRestaurantName] = useState('');
     const[hours, setHours] = useState({});
     const[foodtypes, setFoodTypes] = useState([]);
     const[bannerImg, setBannerImg] = useState(``);
 
-
     const getRestaurantDetail = () => {
-        axios.get(api.restaurantDetails(`5cc1f333df245c427cc2664b`))
+        axios.get(api.restaurantDetails(`${id}`))
             .then(function (response) {
                 setRestaurantName(response.data.data.name);
                 setHours(response.data.data.hour);

@@ -11,17 +11,17 @@ import RestaurantDetails from './components/RestaurantDetails';
 function App() {
 
   return (
+    
     <Router>
       <div className="App">
         <NavBar/>
         <Switch>
           <Route path="/About" component={About} />
           <Route path="/Login" component={LoginPage} />
-          <Route path="/SearchResults" component={SearchResults} />
-          {/* <Route path="/restaurant/details/" component={RestaurantDetails}/> */}
+          <Route path="/SearchResults/:foodtype" component={SearchResults} />
+          <Route path="/restaurant/details/:id" component={RestaurantDetails}/>
           <Route path="/" component={Home} />
         </Switch>
-
       </div>
     </Router>
 

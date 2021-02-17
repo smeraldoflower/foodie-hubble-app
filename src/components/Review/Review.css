@@ -1,3 +1,6 @@
+.flex{
+    display: flex;
+}
 .Review {
     margin: 85px;
     padding-left: 10px;
@@ -15,6 +18,7 @@
 }
 
 p{
+
     text-align: left;
     font-style: italic;
 }
