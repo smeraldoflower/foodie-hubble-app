@@ -1,7 +1,8 @@
-// import './Login.css';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import axios from 'axios'
 import { api } from '../utilities/api'
+import './Login.css';
 
 function Login() {
 
@@ -31,16 +32,14 @@ function Login() {
     return (
         <div className="Login">
             <h2>LOGIN</h2>
-            <form onSubmit={handleLogin}>
-                <label>Username:
-                    <input type='text' value={username} onChange={e => setUsername(e.target.value)} />
-                </label><br />
-                <label>Password:
-                    <input type='text' value={password} onChange={e => setPassword(e.target.value)} />
-                </label><br />
-                <input type='submit' value='LOGIN' />
-            </form>
+                <input type='text' placeholder='Username' value={username} onChange={e => setUsername(e.target.value)} />
+                <br />
+                <input type='text' placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} />
+                <br />
+                <input type='submit' value='LOGIN' onClick={handleLogin} />
             {isloggedOn ? <p>Login Successful</p> : null}
+            <br/>
+            <Link to='/SignUp'>Not a member? Click here to Sign Up now!</Link>
         </div >
     );
 

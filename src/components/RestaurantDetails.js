@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
 import { useParams } from "react-router-dom";
@@ -30,12 +30,16 @@ function RestaurantDetails(props) {
             .catch(function (error) {
                 console.log(error);
             });
-    }
+    };
+
+    useEffect(() => {
+        getRestaurantDetail();
+    }, []);
 
     return (
-        <div className="Login">
-            <h2 onClick = {getRestaurantDetail}> I am a restaurant </h2>
-            <input type="submit" value = "RestDet" onClick = {getRestaurantDetail}/>
+        <div className="RestaurantDetails">
+            <h2> I am a restaurant </h2>
+            {/* <input type="submit" value = "RestDet" onClick = {getRestaurantDetail}/> */}
             <br/>
             <h2>{restaurantName}</h2>
             <img src= {bannerImg}/>

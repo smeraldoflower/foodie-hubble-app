@@ -6,9 +6,10 @@ function Home(props) {
     return (
         <div className="Home">
             <br />
+            <h1> What would you like to eat today? </h1>
+            <br />
             <SearchBar history={props.history} />
             <br/>
-            
         </div>
     )
 }

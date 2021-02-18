@@ -15,7 +15,7 @@ function NavBar() {
                 <NavLink to="/Order" activeStyle><h3>Order</h3></NavLink>
                 <NavLink to="/UserInfo" activeStyle><h3>User Info</h3></NavLink>
                 <NavBtnLink to="/Login"><h3>LOGIN</h3></NavBtnLink>
-                <NavBtnLink to="/Login"><h3>SIGNUP</h3></NavBtnLink>
+                <NavBtnLink to="/SignUp"><h3>SIGNUP</h3></NavBtnLink>
             </NavMenu>
         </Nav>
         </>

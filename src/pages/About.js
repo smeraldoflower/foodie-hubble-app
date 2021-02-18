@@ -8,7 +8,6 @@ function About() {
         <div className="About">
             <h2>About Us</h2>
             <Review/>
-            <RestaurantDetails/>            
         </div>
     )
 }

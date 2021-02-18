@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar'
 import Home from './pages/Home'
 import About from './pages/About'
 import LoginPage from './pages/LoginPage'
+import SignUpPage from './pages/SignUpPage'
 import SearchResults from './pages/SearchResults'
 import RestaurantDetails from './components/RestaurantDetails';
 
@@ -18,10 +19,12 @@ function App() {
         <Switch>
           <Route path="/About" component={About} />
           <Route path="/Login" component={LoginPage} />
+          <Route path="/SignUp" component={SignUpPage} />
           <Route path="/SearchResults/:foodtype" component={SearchResults} />
           <Route path="/restaurant/details/:id" component={RestaurantDetails}/>
           <Route path="/" component={Home} />
         </Switch>
+        {/* <Footer/> */}
       </div>
     </Router>
 

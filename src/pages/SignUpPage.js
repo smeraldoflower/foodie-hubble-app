@@ -1,15 +1,14 @@
 import React from 'react'
-import Login from '../components/Login'
 import SignUp from '../components/SignUp'
 import './LoginPage.css';
 
-function LoginPage() {
+function SignUpPage() {
     return (
         <div className="LoginPage">
-            <Login/>
+            <SignUp/>
         </div>
     )
 }
 
-export default LoginPage
+export default SignUpPage
 
