@@ -4,7 +4,7 @@ import axios from 'axios'
 import { api } from '../utilities/api'
 import ProfileCard from './ProfileCard';
 
-function RestaurantDetails(props) {
+function RestaurantProfile(props) {
 
     const { id } = useParams();
 
@@ -61,4 +61,4 @@ function RestaurantDetails(props) {
 
 }
 
-export default RestaurantDetails;
+export default RestaurantProfile;
