@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import axios from 'axios';
-import { api } from '../utilities/api';
-import SearchBar from '../components/SearchBar/SearchBar';
+import axios from 'axios'
+import { api } from '../utilities/api'
+import SearchBar from '../components/SearchBar/SearchBar'
 import Card from '../components/Card/Card';
 
 function SearchResults(props) {
