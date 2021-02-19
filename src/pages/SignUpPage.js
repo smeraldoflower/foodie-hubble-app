@@ -1,13 +1,13 @@
 import React from 'react';
 import SignUp from '../components/SignUp'
 
-function SignUpPg() {
+function SignUpPage() {
 
     return (
-        <div className="SignUpPg">
+        <div className="SignUpPage">
             <SignUp />
         </div>
     )
 }
 
-export default SignUpPg;
+export default SignUpPage;
