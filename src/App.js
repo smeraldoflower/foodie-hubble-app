@@ -4,6 +4,8 @@ import './css/App.css';
 import Home from './pages/Home'
 import About from './pages/About'
 import SignUpPg from './pages/SignUpPg'
+import SearchResults from './pages/SearchResults'
+import RestaurantProfile from './components/RestaurantProfile'
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Switch>
           <Route path="/SignUpPg" component={SignUpPg} />
           <Route path="/About" component={About} />
+          <Route path="/SearchResults" component={SearchResults} />
+          <Route path="/restaurant/details/:id" component={RestaurantProfile} />
           <Route path="/" component={Home} />
         </Switch>
 

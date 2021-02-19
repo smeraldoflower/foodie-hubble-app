@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
-import '../components/Card.css';
+import '../css/Card.css';
+
 
 function Card(props) {
 
