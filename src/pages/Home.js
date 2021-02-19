@@ -1,15 +1,15 @@
 import React from 'react';
-import Login from '../components/Login'
-import SearchBar from '../components/SearchBar'
+import SearchBar from '../components/SearchBar/SearchBar'
+import './Home.css'
 
 function Home(props) {
 
     return (
         <div className="Home">
-            <Login />
+            <h1> What would you like to eat today? </h1>
             <br />
             <SearchBar history={props.history} />
-            <br/>
+            <br />
         </div>
     )
 }

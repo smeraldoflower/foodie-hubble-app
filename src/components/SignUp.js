@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
+import './Login.css';
+
 
 // Not working, returning HTTP/1.1 400 BAD REQUEST
 
@@ -34,19 +36,14 @@ function SignUp() {
 
     return (
         <div className="SignUp">
-            <form onSubmit={handleSignUp}>
-                <label>Username: 
-                    <input type='text' value={username} onChange={e => setUsername(e.target.value)} />
-                </label><br />
-                <label>Email: 
-                    <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
-                </label><br />
-                <label>Password: 
-                    <input type='text' value={password} onChange={e => setPassword(e.target.value)} />
-                </label><br />
-                    <input type='submit' value='SIGNUP'/>
-            </form>
-            <p>{}</p>
+            <h2>NEW MEMBER? SIGN UP HERE</h2>
+                <input type='text' placeholder='Username' value={username} onChange={e => setUsername(e.target.value)} />
+                <br />
+                <input type='text' placeholder='Email' value={email} onChange={e => setEmail(e.target.value)} />
+                <br />
+                <input type='text' placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} />
+                <br />
+                <input type='submit' value='SIGNUP' onClick={handleSignUp}/>
         </div >
     );
 

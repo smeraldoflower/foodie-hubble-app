@@ -1,37 +1,32 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
-import './css/App.css';
+import './App.css'
+import NavBar from './components/NavBar/NavBar'
+import Footer from './components/Footer/Footer';
 import Home from './pages/Home'
 import About from './pages/About'
+import LoginPage from './pages/LoginPage'
 import SignUpPage from './pages/SignUpPage'
 import SearchResults from './pages/SearchResults'
-import RestaurantProfile from './components/RestaurantProfile'
-
+import RestaurantDetails from './components/RestaurantDetails';
 
 function App() {
 
   return (
+    
     <Router>
       <div className="App">
-
-        <h2>Foodie Hubble App</h2>
-
-        <nav>
-          <ul>
-            <li><Link to="/" style={{textDecoration: 'none'}}>Home</Link></li>
-            <li><Link to="/About" style={{textDecoration: 'none'}}>About</Link></li>
-            <li><Link to="/SignUp" style={{textDecoration: 'none'}}>SignUp</Link></li><br/>
-          </ul>
-        </nav>
-
+        <NavBar/>
         <Switch>
           <Route path="/SignUp" component={SignUpPage} />
           <Route path="/About" component={About} />
-          <Route path="/SearchResults" component={SearchResults} />
-          <Route path="/restaurant/details/:id" component={RestaurantProfile} />
+          <Route path="/Login" component={LoginPage} />
+          <Route path="/SignUp" component={SignUpPage} />
+          <Route path="/SearchResults/:foodtype" component={SearchResults} />
+          <Route path="/restaurant/details/:id" component={RestaurantDetails}/>
           <Route path="/" component={Home} />
         </Switch>
-
+        <Footer/>
       </div>
     </Router>
 
