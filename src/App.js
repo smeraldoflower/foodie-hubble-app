@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import './css/App.css';
 import Home from './pages/Home'
 import About from './pages/About'
-import SignUpPg from './pages/SignUpPg'
+import SignUpPage from './pages/SignUpPage'
 import SearchResults from './pages/SearchResults'
 import RestaurantProfile from './components/RestaurantProfile'
 
@@ -20,12 +20,12 @@ function App() {
           <ul>
             <li><Link to="/" style={{textDecoration: 'none'}}>Home</Link></li>
             <li><Link to="/About" style={{textDecoration: 'none'}}>About</Link></li>
-            <li><Link to="/SignUpPg" style={{textDecoration: 'none'}}>SignUp</Link></li><br/>
+            <li><Link to="/SignUp" style={{textDecoration: 'none'}}>SignUp</Link></li><br/>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/SignUpPg" component={SignUpPg} />
+          <Route path="/SignUp" component={SignUpPage} />
           <Route path="/About" component={About} />
           <Route path="/SearchResults" component={SearchResults} />
           <Route path="/restaurant/details/:id" component={RestaurantProfile} />
