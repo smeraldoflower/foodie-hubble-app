@@ -1,6 +1,5 @@
 import React from 'react';
-import Login from '../components/Login'
-import SearchBar from '../components/SearchBar'
+import SearchBar from '../components/SearchBar/SearchBar'
 
 function Home(props) {
 

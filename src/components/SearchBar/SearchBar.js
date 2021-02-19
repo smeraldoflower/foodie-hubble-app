@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
-import { api } from '../utilities/api';
+import { api } from '../../utilities/api';
 
 
 function SearchBar(props) {
