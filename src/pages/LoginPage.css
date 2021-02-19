@@ -1,0 +1,12 @@
+.LoginPage, .SignUpPage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(34, 241, 248, 0.356);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}

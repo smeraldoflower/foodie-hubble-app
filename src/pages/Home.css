@@ -1,0 +1,9 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 95%;
+    
+    margin: 0%;
+    padding: 0%;
+}

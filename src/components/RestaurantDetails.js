@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { api } from '../utilities/api'
+import { useParams } from "react-router-dom";
 
-function RestaurantDetails() {
 
+function RestaurantDetails(props) {
+
+    const {id} = useParams();
+    
     const[restaurantName, setRestaurantName] = useState('');
     const[hours, setHours] = useState({});
     const[foodtypes, setFoodTypes] = useState([]);
     const[bannerImg, setBannerImg] = useState(``);
 
-
     const getRestaurantDetail = () => {
-        axios.get(api.restaurantDetails(`5cc1fd33df245c427cc26655`))
+        axios.get(api.restaurantDetails(`${id}`))
             .then(function (response) {
                 setRestaurantName(response.data.data.name);
                 setHours(response.data.data.hour);
@@ -27,11 +30,16 @@ function RestaurantDetails() {
             .catch(function (error) {
                 console.log(error);
             });
-    }
+    };
+
+    useEffect(() => {
+        getRestaurantDetail();
+    }, []);
 
     return (
-        <div className="Login">
-            <input type="submit" value = "RestDet" onClick = {getRestaurantDetail}/>
+        <div className="RestaurantDetails">
+            <h2> I am a restaurant </h2>
+            {/* <input type="submit" value = "RestDet" onClick = {getRestaurantDetail}/> */}
             <br/>
             <h2>{restaurantName}</h2>
             <img src= {bannerImg}/>
