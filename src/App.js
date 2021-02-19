@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
+import Footer from './components/Footer/Footer';
 import Home from './pages/Home'
 import About from './pages/About'
 import LoginPage from './pages/LoginPage'
@@ -24,7 +25,7 @@ function App() {
           <Route path="/restaurant/details/:id" component={RestaurantDetails}/>
           <Route path="/" component={Home} />
         </Switch>
-        {/* <Footer/> */}
+        <Footer/>
       </div>
     </Router>
 
