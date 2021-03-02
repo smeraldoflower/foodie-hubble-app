@@ -1,7 +1,10 @@
 .Card {
     margin: 5px;
-    border-style: solid;
-    border-color: brown;
+    width: 450px;
+    height: 225px;
+    border-style: outset;
+    border-color: rgb(238, 201, 214);
+    background-color: rgba(247, 226, 233, 0.884);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;

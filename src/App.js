@@ -8,7 +8,7 @@ import About from './pages/About'
 import LoginPage from './pages/LoginPage'
 import SignUpPage from './pages/SignUpPage'
 import SearchResults from './pages/SearchResults'
-import RestaurantDetails from './components/RestaurantDetails';
+import RestaurantProfile from './components/RestaurantProfile';
 
 function App() {
 
@@ -18,12 +18,11 @@ function App() {
       <div className="App">
         <NavBar/>
         <Switch>
-          <Route path="/SignUp" component={SignUpPage} />
           <Route path="/About" component={About} />
           <Route path="/Login" component={LoginPage} />
           <Route path="/SignUp" component={SignUpPage} />
-          <Route path="/SearchResults/:foodtype" component={SearchResults} />
-          <Route path="/restaurant/details/:id" component={RestaurantDetails}/>
+          <Route path="/SearchResults" component={SearchResults} />
+          <Route path="/restaurant/details/:id" component={RestaurantProfile}/>
           <Route path="/" component={Home} />
         </Switch>
         <Footer/>

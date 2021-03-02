@@ -1,0 +1,36 @@
+.ProfileCard{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    background-color: mistyrose;
+}
+
+.ProfileCard .bannerImg img{
+    border: rgb(238, 201, 214) 3pt ridge;
+    height: 450px;
+    width: 1000px;
+}
+
+.RestaurantName{
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:indigo;
+}
+
+.RestaurantMenu{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: left;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.Socials{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-content: center;
+}

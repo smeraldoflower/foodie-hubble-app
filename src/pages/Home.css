@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    height: 95%;
-    
-    margin: 0%;
-    padding: 0%;
+    background-color: mistyrose;
+    margin: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
