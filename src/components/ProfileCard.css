@@ -4,10 +4,14 @@
     align-content: center;
     justify-content: space-between;
     background-color: mistyrose;
+    margin: 25px;
+    padding: 35px;
+    border-radius: 15px;
 }
 
 .ProfileCard .bannerImg img{
-    border: rgb(238, 201, 214) 3pt ridge;
+    border: rgb(238, 201, 214) 5pt ridge;
+    border-radius: 10px;
     height: 450px;
     width: 1000px;
 }

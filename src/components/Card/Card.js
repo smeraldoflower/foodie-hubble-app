@@ -8,7 +8,8 @@ function Card(props) {
         <div className="Card">
             <Link to={`/restaurant/details/${props.id}`}><h3>{props.name}</h3></Link>
             <img className="banner" alt="Restaurant Banner" width="200" height="150" src={`${props.banner_image}`} />
-            <p>I am a restaurant card.</p>
+            <br/>
+            <h4>Average Rating: {props.rating} / 5</h4>
         </div>
     )
 }

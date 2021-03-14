@@ -9,23 +9,27 @@ import LoginPage from './pages/LoginPage'
 import SignUpPage from './pages/SignUpPage'
 import SearchResults from './pages/SearchResults'
 import RestaurantProfile from './components/RestaurantProfile';
+import AuthContextProvider from './contexts/AuthContext';
 
 function App() {
 
   return (
-    
     <Router>
       <div className="App">
-        <NavBar/>
-        <Switch>
-          <Route path="/About" component={About} />
-          <Route path="/Login" component={LoginPage} />
-          <Route path="/SignUp" component={SignUpPage} />
-          <Route path="/SearchResults" component={SearchResults} />
-          <Route path="/restaurant/details/:id" component={RestaurantProfile}/>
-          <Route path="/" component={Home} />
-        </Switch>
-        <Footer/>
+        <AuthContextProvider>
+          <NavBar/>
+          <Switch>
+            <Route path="/About" component={About} />
+            <Route path="/Login" component={LoginPage} />
+            <Route path="/SignUp" component={SignUpPage} />
+            <Route path="/SearchResults/:foodtype" component={SearchResults} />
+            <Route path="/SearchResults" component={SearchResults} />
+            <Route path="/Restaurants" component={SearchResults} />
+            <Route path="/restaurant/details/:id" component={RestaurantProfile} />
+            <Route path="/" component={Home} />
+          </Switch>
+          <Footer />
+        </AuthContextProvider>
       </div>
     </Router>
 

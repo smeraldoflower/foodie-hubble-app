@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: gray;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.About{
+  background-color: mistyrose;
+  font-family: Arial, Helvetica, sans-serif;
+  color:black;
+  margin: 25px;
+  padding: 35px;
+  border-radius: 15px;
+}
+.About p{
+  margin: 2%;
+  text-align: justify;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

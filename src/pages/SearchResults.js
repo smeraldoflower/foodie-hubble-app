@@ -7,11 +7,9 @@ import './SearchResults.css'
 
 function SearchResults(props) {
 
-    // const { foodType } = useParams();
+    const { foodtype } = useParams();
 
-    const foodType =
-        props.location.state === undefined || props.location.state.foodType === undefined ?
-            '' : props.location.state.foodType;
+    const foodType = foodtype === undefined ? '' : foodtype;
 
     const [searchResults, setSearchResults] = useState([]);
 
@@ -46,6 +44,7 @@ function SearchResults(props) {
                                 id={result._id}
                                 name={result.name}
                                 banner_image={result.banner_image}
+                                rating={(result.review.average).toFixed(2)}
                             />
                     ) : null
             }

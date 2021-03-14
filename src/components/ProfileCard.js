@@ -21,7 +21,6 @@ function ProfileCard(props) {
                 <p>{props.foodTypes.length !== 0 ? props.foodTypes.map((foodtype) => `${foodtype} / `) : null}</p>
             </div>
 
-
             <div className="RestaurantMenu">
                 <h3>We Serve: </h3>
                 {props.menu.length !== 0 ? props.menu.map((restaurantMenu) => <li>{restaurantMenu.name}: {restaurantMenu.unit_price}</li>) : null}

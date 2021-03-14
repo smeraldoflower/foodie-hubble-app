@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext} from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import { api } from '../utilities/api'
 import './Login.css';
+import { AuthContext } from '../contexts/AuthContext';
 
 function Login() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isloggedOn, setLoginStatus] = useState(false);
+    // const [loginStatus, setLoginStatus] = useContext(AuthContext);
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -37,7 +39,9 @@ function Login() {
                 <input type='text' placeholder='Password' value={password} onChange={e => setPassword(e.target.value)} />
                 <br />
                 <input type='submit' value='LOGIN' onClick={handleLogin} />
+
             {isloggedOn ? <p>Login Successful</p> : null}
+
             <br/>
             <Link to='/SignUp'>Not a member? Click here to Sign Up now!</Link>
         </div >
